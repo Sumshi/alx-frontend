@@ -422,7 +422,10 @@ template {
     --section-tagline-margin: 0;
 }
 
-* {
+/* universal box-sizing */
+*,
+*:before,
+*:after {
     box-sizing: border-box;
 }
 html {
