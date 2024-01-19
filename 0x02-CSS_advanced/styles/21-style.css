@@ -512,7 +512,7 @@ a:active {
 
 
 /*UL ROW*/
-.row ul {
+ul.row {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -530,11 +530,6 @@ a:active {
     padding: 0.5rem;
 }
 
-/* selects class that starts with col-*/
-[class^="col-"] {
-    float: left;
-    padding: 0.5rem;
-}
 
 /* SECTION SECTION  */
 .section-header {
@@ -593,3 +588,8 @@ a:active {
     clear: both;
 }
 
+/* selects class that starts with col-*/
+[class^="col-"] {
+    float: left;
+    padding: 0.5rem;
+}

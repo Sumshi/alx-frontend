@@ -445,7 +445,9 @@ template {
     --transition-cubic-bezier: cubic-bezier(0.17, 0.67, 0, 1.01);
 }
 
-* {
+*,
+*:before,
+*:after {
     box-sizing: border-box;
 }
 html {
@@ -672,7 +674,7 @@ a:active {
     transform: scale(0.95);
 }
 /*UL ROW*/
-.row ul {
+.ul.row {
     margin: 0;
     padding: 0;
     list-style: none;
