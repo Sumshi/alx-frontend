@@ -408,9 +408,13 @@ template {
     --section-title-color: var(--color-black);
 }
 
-* {
+/* universal box-sizing */
+*,
+*:before,
+*:after {
     box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
     font-size: 62.5%;
