@@ -411,7 +411,9 @@ template {
     --section-body-padding: 0 0 3rem;
     --section-footer-padding: 3rem 0 0;
     --section-footer-align: center;
+    --section-tagline-margin: 0;
     --footer-padding: 5rem 0 1rem;
+    /* navbar */
     --nav-item-font-family: var(--font-family-title);
     --nav-item-font-weight: var(--font-weight-bold);
     --nav-item-font-size: var(--font-size-medium);
@@ -419,12 +421,17 @@ template {
     --nav-item-display: inline-block;
     --nav-item-margin: 0 0 3rem 0;
     --nav-item-link-hover: var(--color-primary);
-    --section-tagline-margin: 0;
 }
 
-* {
+
+/* universal box-sizing */
+*,
+*:before,
+*:after {
     box-sizing: border-box;
 }
+
+/* Effortless transitions when scrolling */
 html {
     scroll-behavior: smooth;
     font-size: 62.5%;
@@ -451,6 +458,7 @@ h6 {
     font-weight: var(--font-weight-bold);
 }
 
+/* Anchor Tags  */
 a:link {
     color: var(--text-color);
     text-decoration: none;
@@ -477,12 +485,9 @@ a:active {
     color: var(--color-primary);
 }
 
-/*navigation styles*/
+/* NAVIGATION BAR  */
 .navbar-menu {
     float: right;
-}
-.section {
-    padding: var(--section-padding);
 }
 
 .nav {
@@ -510,31 +515,17 @@ a:active {
     color: var(--nav-item-link-hover);
 }
 
-
-/*UL ROW*/
-ul.row {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.col-1-3 {
-    width: 33.33%;
-    float: left;
-    padding: 0.5rem;
-}
-
-.col-1-2 {
-    width: 50%;
-    float: left;
-    padding: 0.5rem;
-}
-
-
 /* SECTION SECTION  */
+.section {
+    padding: var(--section-padding);
+}
+
+.section-header {
+    padding: var(--section-header-padding);
+}
+
 .section-header {
     text-align: var(--section-header-align);
-    padding: var(--section-header-padding);
 }
 
 .section-body {
@@ -545,6 +536,7 @@ ul.row {
     padding: var(--section-footer-padding);
     text-align: var(--section-footer-align);
 }
+
 .section-title {
     font-family: var(--font-family-title);
     font-size: var(--font-size-xx-large);
@@ -567,6 +559,28 @@ ul.row {
     margin-right: auto;
 }
 
+/* GRID STYLING */
+ul.row {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.col-1-3 {
+    width: 33.33%;
+}
+
+.col-1-2 {
+    width: 50%;
+}
+
+[class^="col-"] {
+    float: left;
+    padding: 0.5rem;
+}
+
+
+/* FOOTER  */
 .footer {
     padding: var(--footer-padding);
 }
@@ -581,15 +595,10 @@ ul.row {
     text-align: right;
 }
 
+
 /* CSS rule that creates a new row after each instance of the class row */
 .row::after {
     content: "";
     display: table;
     clear: both;
-}
-
-/* selects class that starts with col-*/
-[class^="col-"] {
-    float: left;
-    padding: 0.5rem;
 }
